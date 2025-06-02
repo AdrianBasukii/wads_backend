@@ -14,6 +14,8 @@ console.log('Google OAuth Config:', {
   callbackURL: process.env.GOOGLE_CALLBACK_URL
 });
 
+console.log('All env vars:', process.env)
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
