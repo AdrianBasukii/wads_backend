@@ -40,7 +40,7 @@ const refreshToken = asyncHandler(async (req, res) => {
     }
 
     // Generate new access token
-    const accessToken = generateAccessToken(user._id);
+    user.accessToken = generateAccessToken(user._id);
 
     res.json({
       _id: user._id,
@@ -49,7 +49,7 @@ const refreshToken = asyncHandler(async (req, res) => {
       email: user.email,
       role: user.role,
       profilePicture: user.profilePicture,
-      accessToken
+      accessToken: user.accessToken
     });
   } catch (error) {
     res.status(401);
@@ -70,9 +70,8 @@ const logout = asyncHandler(async (req, res) => {
   res.clearCookie('refreshToken', {
     httpOnly: true,
     secure: true,
-    sameSite: 'None',
-    path: '/',
-    domain: process.env.COOKIE_DOMAIN || undefined
+    sameSite: 'Lax',
+    path: '/'
   });
 
   res.json({ message: 'Logged out successfully' });
