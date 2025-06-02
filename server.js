@@ -50,9 +50,11 @@ app.use(helmet());
 // app.use(cors()); //VALUE BEFORE CHANGED TO CREDENTIALS:TRUE
 
 console.log(process.env.CLIENT_URL)
+const allowedOrigin = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, '') : "http://localhost:5173";
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: allowedOrigin,
     credentials: true,
   })
 );
