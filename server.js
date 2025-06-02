@@ -129,9 +129,10 @@ app.get(
         res.cookie("refreshToken", refreshToken, {
           httpOnly: true,
           secure: true,
-          sameSite: "Lax",
+          sameSite: "None",
           path: "/",
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+          domain: process.env.COOKIE_DOMAIN || undefined
         });
         
         // Get the frontend callback URL from state

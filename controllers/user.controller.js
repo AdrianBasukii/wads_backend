@@ -123,9 +123,10 @@ const registerUser = asyncHandler(async (req, res) => {
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "Lax",
+      sameSite: "None",
       path: "/",
       maxAge: 7 * 24 * 60 * 60 * 1000,
+      domain: process.env.COOKIE_DOMAIN || undefined
     });
 
     // If 2FA is not enabled, return full user data with tokens
@@ -286,9 +287,10 @@ const loginUser = asyncHandler(async (req, res) => {
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: true,
-    sameSite: "Lax",
+    sameSite: "None",
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000,
+    domain: process.env.COOKIE_DOMAIN || undefined
   });
 
   // If 2FA is not enabled, return full user data with tokens
