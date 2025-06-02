@@ -50,7 +50,7 @@ app.use(helmet());
 // app.use(cors()); //VALUE BEFORE CHANGED TO CREDENTIALS:TRUE
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   })
 );
@@ -103,10 +103,10 @@ app.get(
       try {
         if (err) {
           console.error('Google OAuth Error:', err);
-          return res.redirect('http://localhost:5173/login');
+          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
         }
         if (!user) {
-          return res.redirect('http://localhost:5173/login');
+          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
         }
 
         // Generate new tokens
@@ -131,7 +131,7 @@ app.get(
         });
         
         // Get the frontend callback URL from state
-        const frontendCallbackUrl = req.query.state || 'http://localhost:5173/auth/google/callback';
+        const frontendCallbackUrl = req.query.state || `${process.env.CLIENT_URL}/auth/google/callback`;
 
         // Prepare user data with the new access token
         const userData = {
@@ -150,7 +150,7 @@ app.get(
 
       } catch (error) {
         console.error('Token Generation Error:', error);
-        return res.redirect('http://localhost:5173/login');
+        return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
       }
     })(req, res, next);
   }

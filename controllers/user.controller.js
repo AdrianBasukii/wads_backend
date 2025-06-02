@@ -654,7 +654,7 @@ const updateNotificationSettings = asyncHandler(async (req, res) => {
 
 // Google OAuth login
 const googleLogin = (req, res, next) => {
-  const frontendCallbackUrl = req.query.redirect_uri || 'http://localhost:5173/auth/google/callback';
+  const frontendCallbackUrl = req.query.redirect_uri || `${process.env.CLIENT_URL}/auth/google/callback`;
   
   passport.authenticate("google", {
     scope: ["profile", "email"],
@@ -672,15 +672,15 @@ const googleCallback = async (req, res, next) => {
       try {
         if (err) {
           console.error('Google OAuth Error:', err);
-          return res.redirect('http://localhost:5173/login?error=auth_failed');
+          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login?error=auth_failed}` : 'http://localhost:5173/login?error=auth_failed');
         }
 
         if (!user) {
-          return res.redirect('http://localhost:5173/login?error=no_user');
+          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login?error=no_user}` : 'http://localhost:5173/login?error=no_user');
         }
 
         // Get the state parameter which should contain the frontend callback URL
-        const frontendCallbackUrl = req.query.state || 'http://localhost:5173/auth/google/callback';
+        const frontendCallbackUrl = req.query.state || `${process.env.CLIENT_URL}/auth/google/callback`;
 
         // Prepare user data
         const userData = {
@@ -700,7 +700,7 @@ const googleCallback = async (req, res, next) => {
         
       } catch (error) {
         console.error('Google Callback Error:', error);
-        return res.redirect('http://localhost:5173/login?error=server_error');
+        return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login?error=server_error}` : 'http://localhost:5173/login?error=server_error');
       }
     }
   )(req, res, next);
