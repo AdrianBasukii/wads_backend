@@ -48,6 +48,8 @@ app.set("io", io);
 // Middleware
 app.use(helmet());
 // app.use(cors()); //VALUE BEFORE CHANGED TO CREDENTIALS:TRUE
+
+console.log(process.env.CLIENT_URL)
 app.use(
   cors({
     origin: process.env.CLIENT_URL || "http://localhost:5173",
