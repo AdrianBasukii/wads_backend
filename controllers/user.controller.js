@@ -287,7 +287,7 @@ const loginUser = asyncHandler(async (req, res) => {
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: true,
-    sameSite: "Lax",
+    sameSite: "None",
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000
   });

@@ -70,7 +70,7 @@ const logout = asyncHandler(async (req, res) => {
   res.clearCookie('refreshToken', {
     httpOnly: true,
     secure: true,
-    sameSite: 'Lax',
+    sameSite: 'None',
     path: '/'
   });
 
