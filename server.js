@@ -131,7 +131,6 @@ app.get(
           sameSite: "None",
           path: "/",
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-          domain: process.env.COOKIE_DOMAIN || undefined
         });
         
         // Get the frontend callback URL from state
