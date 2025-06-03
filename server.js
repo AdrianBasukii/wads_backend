@@ -48,7 +48,6 @@ app.set("io", io);
 app.use(helmet());
 // app.use(cors()); //VALUE BEFORE CHANGED TO CREDENTIALS:TRUE
 
-console.log(process.env.CLIENT_URL)
 const allowedOrigin = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, '') : "http://localhost:5173";
 
 app.use(
@@ -106,10 +105,10 @@ app.get(
       try {
         if (err) {
           console.error('Google OAuth Error:', err);
-          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
+          return res.redirect(process.env.CLIENT_URL ? `${process.env.CLIENT_URL}/login` : 'http://localhost:5173/login');
         }
         if (!user) {
-          return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
+          return res.redirect(process.env.CLIENT_URL ? `${process.env.CLIENT_URL}/login` : 'http://localhost:5173/login');
         }
 
         // Generate new tokens
@@ -140,7 +139,7 @@ app.get(
         const userData = {
           _id: user._id,
           firstName: user.firstName,
-          lastName: user.lastName,
+          lastName: user.lastName || " ",
           email: user.email,
           role: user.role,
           profilePicture: user.profilePicture,
@@ -153,7 +152,7 @@ app.get(
 
       } catch (error) {
         console.error('Token Generation Error:', error);
-        return res.redirect(process.env.CLIENT_URL ? `{${process.env.CLIENT_URL}/login}` : 'http://localhost:5173/login');
+        return res.redirect(process.env.CLIENT_URL ? `${process.env.CLIENT_URL}/login` : 'http://localhost:5173/login');
       }
     })(req, res, next);
   }
