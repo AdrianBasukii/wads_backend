@@ -191,6 +191,195 @@ Key selling points to emphasize:
 - Portable and space-efficient designs
 - International manufacturing standards
 - Multiple application fields and use cases
+# Semesta Medika Web Helpdesk - Navigation Guide
+
+## Site Capabilities
+
+### Ticketing System
+- **Submit Support Tickets**: Create tickets for medical equipment issues with detailed descriptions
+- **Real-time Tracking**: Monitor ticket status and progress updates instantly
+- **File Uploads**: Attach screenshots, documents, and diagnostic files to tickets
+- **Interactive Communication**: Chat directly with support agents through ticket system
+- **Ticket Modification**: Edit and update submitted tickets as needed
+- **Feedback System**: Provide ratings and feedback after issue resolution
+
+### Search & Filtering
+- **Comprehensive Search**: Find tickets by ID, keywords, or detailed descriptions
+- **Status Filtering**: Filter by New, In Progress, Pending, Awaiting Response, or Closed
+- **Advanced Filters**: Sort by category, priority level, or specific date ranges
+- **Communication Search**: Locate specific conversations or agent interactions
+
+### Communication Features
+- **Real-time Messaging**: Direct chat with assigned support agents
+- **Email Notifications**: Automatic updates sent to your registered email
+- **In-app Alerts**: Instant notifications for new messages and status changes
+- **24/7 AI Chatbot**: Automated support for basic troubleshooting and guidance
+
+### Monitoring Dashboard
+- **Unified View**: See all submitted tickets in one comprehensive dashboard
+- **Progress Tracking**: Monitor response times and resolution progress
+- **Complete History**: Access full ticket history and previous communications
+- **Performance Metrics**: View agent performance ratings and feedback
+
+## Navigation by User Type
+
+### Customer/User Navigation
+
+#### **Login & Access**
+- **URL**: www.semestamedika.com/helpdesk
+- **Features**: Secure authentication, password recovery, account verification
+
+#### **Main Dashboard**
+- **Location**: Home page after successful login
+- **Overview Panel**: Summary of all your active and resolved tickets
+- **Quick Actions**: One-click ticket creation button prominently displayed
+- **Activity Feed**: Recent updates, messages, and system notifications
+- **Notification Center**: Centralized hub for all alerts and updates
+
+#### **Submit New Ticket**
+- **Navigation Path**: Dashboard → 'Create New Ticket' button
+- **Step-by-step Process**:
+  1. Enter clear, descriptive ticket subject/title
+  2. Provide detailed description of medical equipment issue
+  3. Select appropriate category (Hardware, Software, Maintenance, Installation, etc.)
+  4. Choose priority level (Low, Medium, High, Critical)
+  5. Upload supporting attachments (photos, error logs, documentation)
+  6. Submit ticket for automatic agent assignment
+- **Result**: Ticket immediately enters system queue with unique ID assigned
+
+#### **Track Tickets**
+- **Navigation Path**: Dashboard → 'My Tickets' section
+- **Status Meanings**:
+  - **New**: Recently submitted, awaiting agent assignment
+  - **In Progress**: Agent actively investigating and working on issue
+  - **Pending**: Waiting for additional information or clarification from you
+  - **Awaiting Response**: Agent has provided update, requires your response
+  - **Resolved**: Issue successfully fixed and ticket officially closed
+
+#### **Communicate with Agents**
+- **Access Method**: Click on any ticket → Navigate to Chat section
+- **Features Available**:
+  - Send direct messages to your assigned support agent
+  - View complete conversation history with timestamps
+  - Receive real-time notifications for agent replies
+  - Upload additional files and screenshots during conversation
+  - Mark messages as urgent when needed
+
+#### **AI Chatbot Support**
+- **Access Point**: Chatbot icon located in bottom-right corner of all pages
+- **Capabilities**:
+  - Instant answers to frequently asked questions
+  - Basic troubleshooting guidance for common issues
+  - Step-by-step help with ticket creation process
+  - Equipment maintenance tips and preventive care advice
+  - Seamless escalation to human agent when complex issues arise
+
+### Agent Navigation
+
+#### **Agent Dashboard**
+- **Location**: Specialized agent portal accessed after login
+- **Main Sections**:
+  - **Assigned Tickets**: Current tickets specifically assigned to you
+  - **Ticket Queue**: New, unassigned tickets available for pickup
+  - **Resolved Tickets**: Archive of your completed work and solutions
+  - **Performance Metrics**: Your response times, resolution rates, and customer ratings
+
+#### **Ticket Management Workflow**
+- **Process Steps**:
+  1. Review assigned tickets from your personal dashboard
+  2. Click individual tickets to view detailed customer information and issue description
+  3. Update ticket status throughout your investigation and resolution process
+  4. Maintain ongoing communication with customer through integrated chat system
+  5. Reassign to specialist team members when expertise is required
+  6. Provide comprehensive resolution summary and officially close ticket
+
+#### **Communication Tools**
+- **Customer Chat**: Direct messaging within each ticket for customer interaction
+- **Agent Collaboration**: Internal messaging system for team coordination
+- **Notification System**: Real-time alerts for new assignments, customer messages, and urgent tickets
+
+
+
+### Agent Navigation
+
+#### **Agent Dashboard**
+- **Location**: Specialized agent portal accessed after login
+- **Main Sections**:
+  - **Assigned Tickets**: Current tickets specifically assigned to you
+  - **Ticket Queue**: New, unassigned tickets available for pickup
+  - **Resolved Tickets**: Archive of your completed work and solutions
+  - **Performance Metrics**: Your response times, resolution rates, and customer ratings
+
+#### **Ticket Management Workflow**
+- **Process Steps**:
+  1. Review assigned tickets from your personal dashboard
+  2. Click individual tickets to view detailed customer information and issue description
+  3. Update ticket status throughout your investigation and resolution process
+  4. Maintain ongoing communication with customer through integrated chat system
+  5. Reassign to specialist team members when expertise is required
+  6. Provide comprehensive resolution summary and officially close ticket
+
+#### **Communication Tools**
+- **Customer Chat**: Direct messaging within each ticket for customer interaction
+- **Agent Collaboration**: Internal messaging system for team coordination
+- **Notification System**: Real-time alerts for new assignments, customer messages, and urgent tickets
+
+## Common Navigation Elements
+
+### Top Navigation Bar
+- **Dashboard**: Return to main overview page from anywhere in system
+- **My Tickets**: Quick access to your personal ticket list and status
+- **Profile**: Update personal information, contact details, and preferences
+- **Notifications**: View all system alerts, messages, and important updates
+- **Logout**: Secure system exit with session termination
+
+### Side Menu
+- **Quick Actions**: Rapid access to create ticket, search functions, and common tasks
+- **Categories**: Browse tickets and information organized by equipment type or issue category
+- **Help Center**: Comprehensive FAQ section and detailed documentation
+- **Contact Information**: Direct access to Semesta Medika company details and support contacts
+
+### Search Functionality
+- **Location**: Search bar prominently displayed at top of every page
+- **Search Options**:
+  - Ticket ID numbers (e.g., #12345, #67890)
+  - Keywords from ticket titles, descriptions, or tags
+  - Agent names and specialist assignments
+  - Equipment model numbers and serial codes
+  - Specific date ranges and time periods
+
+### Notification System
+- **Types of Notifications**:
+  - New ticket assignments for agents
+  - Status updates and progress reports for customers
+  - New messages and chat responses in active tickets
+  - System-wide announcements and maintenance alerts
+  - Customer feedback requests and satisfaction surveys
+- **Access Method**: Bell icon prominently displayed in top navigation bar
+
+## Quick Start Guide
+
+### New Customer Setup
+1. **Account Creation**: Admin creates your account with secure login credentials
+2. **Initial Login**: Access system at www.semestamedika.com/helpdesk
+3. **Profile Completion**: Fill out personal information and contact details
+4. **First Ticket**: Click 'Create New Ticket' to submit your initial support request
+5. **Progress Monitoring**: Track ticket status and updates from your personal dashboard
+6. **Ongoing Support**: Utilize AI chatbot for immediate questions and basic troubleshooting
+
+
+
+### Emergency Support Protocol
+1. **Critical Issues**: For urgent medical equipment failures, immediately mark ticket as 'Critical Priority'
+2. **Immediate Assistance**: Use AI chatbot for instant basic troubleshooting and diagnostic guidance
+3. **Direct Contact**: During business hours, call company directly at (021) 2951 7888
+4. **After-Hours Support**: Submit detailed ticket and utilize chatbot for initial guidance until agent availability
+
+## Contact Information
+- **Website**: www.semestamedika.com/helpdesk
+- **Phone**: (021) 2951 7888
+- **Business Hours**: [Contact admin for specific hours]
+- **Emergency Protocol**: Critical priority tickets with chatbot assistance available 24/7
 `;
 
 export const chatService = {
