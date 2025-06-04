@@ -581,6 +581,41 @@ router.get("/auth/google/callback", googleCallback);
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+/**
+ * @swagger
+ * /api/users/upload-pfp:
+ *   post:
+ *     summary: Upload user profile picture
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               pfp:
+ *                 type: string
+ *                 format: binary
+ *                 description: Profile picture file to upload
+ *     responses:
+ *       200:
+ *         description: Profile picture uploaded successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Profile picture uploaded successfully
+ *       401:
+ *         description: Unauthorized - missing or invalid token
+ *       400:
+ *         description: Bad request - file upload failed or no file provided
+ */
 router.post("/upload-pfp", upload.single("pfp"), protect, uploadProfilePicture);
 
 export default router;
