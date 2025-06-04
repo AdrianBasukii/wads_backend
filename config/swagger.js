@@ -14,7 +14,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:5000',
+        url: 'https://wads-backend.onrender.com/',
         description: 'Development server'
       }
     ],
